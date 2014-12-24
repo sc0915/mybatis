@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.shinowit.dao.mapper.SexInfoMapper" >
+    <cache/>
   <resultMap id="BaseResultMap" type="com.shinowit.model.SexInfo" >
     <!--
       WARNING - @mbggenerated
@@ -9,6 +10,7 @@
     -->
     <id column="sex_id" property="sexId" jdbcType="VARCHAR" />
     <result column="sex_type" property="sexType" jdbcType="VARCHAR" />
+    <collection property="stuList" column="sex_id" ofType="com.shinowit.model.StuInfo" select="com.shinowit.dao.mapper.StuInfoMapper.selectStuBySexId"/>
   </resultMap>
   <sql id="Example_Where_Clause" >
     <!--

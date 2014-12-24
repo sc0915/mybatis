@@ -48,11 +48,11 @@
         </javaClientGenerator>
 
         <table tableName="stu_info">
-            <generatedKey column="stu_id" sqlStatement="MySql"/>
+
         </table>
 
         <table tableName="sex_info">
-            <generatedKey column="sex_id" sqlStatement="MySql"/>
+
         </table>
 
         <table tableName="tea_info">
